@@ -1,0 +1,35 @@
+//@import "../../node_modules/bootstrap/scss/functions";
+
+
+// Definicja domyślnych kolorów
+$theme-colors: (
+  "primary": #ff6600,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #17a2b8,
+  "light": #f8f9fa,
+  "dark": #343a40
+) !default;
+
+// Jeśli potrzebujesz $theme-colors-text, dodaj:
+$theme-colors-text: $theme-colors !default;
+
+@function to-rgb($color-map, $color-name) {
+  $color: map.get($color-map, $color-name);
+  @return (
+    color.channel($color, "red"),
+    color.channel($color, "green"),
+    color.channel($color, "blue")
+  );
+}
+
+// Konwersja na RGB
+$theme-colors-rgb: map.merge(
+  (),
+  (
+    "primary": to-rgb($theme-colors, "primary"),
+    "secondary": to-rgb($theme-colors, "secondary")
+  )
+);

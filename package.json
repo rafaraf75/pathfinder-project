@@ -18,7 +18,7 @@
         "build": "npm-run-all build:* test",
         "build:clean": "rimraf dist && mkdirp dist",
         "build:copy": "copyfiles -a -u 1 -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" dist",
-        "build:sass": "sass src/sass:dist/css ",
+        "build:sass": "sass src/sass/style.scss dist/css/style.css",
         "build:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
         "build-dev": "npm-run-all build-dev:sass build:autoprefixer",
         "build-dev:sass": "sass src/sass:dist/css",
@@ -47,7 +47,8 @@
         "stylelint-scss": "^3.5.4"
     },
     "dependencies": {
+        "bootstrap": "^5.2.3",
         "json-server": "^0.16.3",
-        "sass": "^1.35.1"
+        "sass": "^1.58.0"
     }
 }

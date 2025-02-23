@@ -1,0 +1,35 @@
+@import 'variables';
+
+.navbar {
+    position: absolute; // Zamiast fixed, aby dopasować do tła
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: transparent;
+    z-index: 1000;
+    padding: 10px 20px;
+
+
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-family: $font-black;
+        color: $color-white !important;
+    }
+
+    .nav-link {
+        color: $color-white !important;
+        font-family: $font-semibold;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $color-primary !important;
+        }
+    }
+}
+
+
+
+
+

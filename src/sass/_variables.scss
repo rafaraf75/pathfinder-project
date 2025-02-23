@@ -1,31 +1,56 @@
 //@import "../../node_modules/bootstrap/scss/functions";
-
-
-// Definicja domyślnych kolorów
+@use "sass:map";
+@use "sass:color";
+// 🎨 Nowe kolory dla Pathfinder
 $theme-colors: (
-  "primary": #ff6600,
-  "secondary": #6c757d,
-  "success": #28a745,
-  "danger": #dc3545,
-  "warning": #ffc107,
-  "info": #17a2b8,
-  "light": #f8f9fa,
-  "dark": #343a40
+  "primary": #C24C00,   // Ceglasty/Czerwony
+  "secondary": #8C4C46, // Ciemnoczerwony
+  "success": #8CC671,   // Zielony
+  "danger": #dc3545,    // Standardowy czerwony Bootstrapa
+  "warning": #ffc107,   // Standardowy żółty Bootstrapa
+  "info": #17a2b8,      // Standardowy niebieski Bootstrapa
+  "light": #FFFFFF,     // Biały
+  "dark": #111111       // Czarny
 ) !default;
 
-// Jeśli potrzebujesz $theme-colors-text, dodaj:
-$theme-colors-text: $theme-colors !default;
+$color-white: #FFFFFF;
+$color-dark: #111111; // Czarny
 
+$color-primary: map-get($theme-colors, "primary");
+$color-success: map-get($theme-colors, "success");
+$color-light: map-get($theme-colors, "light");
+
+
+
+
+
+// Czcionki
+$font-primary: 'Source Sans Pro', sans-serif;
+$font-black: 'Source Sans Pro Black', sans-serif;
+$font-semibold: 'Source Sans Pro Semibold', sans-serif;
+$font-bold: 'Source Sans Pro Bold', sans-serif;
+$font-regular: 'Source Sans Pro Regular', sans-serif;
+
+// 📏 Odstępy i styl globalny
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+$border-radius: 8px;
+$transition-speed: 0.3s;
+
+// Funkcja do konwersji na RGB
 @function to-rgb($color-map, $color-name) {
   $color: map.get($color-map, $color-name);
   @return (
-    color.channel($color, "red"),
-    color.channel($color, "green"),
-    color.channel($color, "blue")
+    color.red($color),
+    color.green($color),
+    color.blue($color)
   );
 }
 
-// Konwersja na RGB
+// RGB dla Bootstrapa
 $theme-colors-rgb: map.merge(
   (),
   (

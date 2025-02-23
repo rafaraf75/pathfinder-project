@@ -1,8 +1,13 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/variables";
+// Nasze zmienne (nadpisujemy Bootstrap)
+@import "variables";
+
+// Import pełnego Bootstrapa (teraz już działa z naszymi zmiennymi)
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "pages/about";
-@import "pages/finder";
+
+// Nasze ogólne style
 @import "global";
 @import "layout";
+
+// Style dla poszczególnych podstron
+@import "pages/about";
+@import "pages/finder";

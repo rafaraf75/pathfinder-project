@@ -1,0 +1,32 @@
+@import "variables"; // Import zmiennych, jeśli zawierają definicje fontów
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+// Globalne ustawienia czcionek
+body {
+    font-family: $font-primary, sans-serif;
+    font-size: 16px;
+    color: $color-light;
+}
+
+// Style dla nagłówków
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-bold;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+// Style dla nawigacji
+.navbar {
+    .nav-link {
+        font-size: 1.4rem;
+        font-family: $font-bold !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+// Klasa pomocnicza dla wytłuszczonego tekstu
+.bold-text {
+    font-family: $font-bold;
+    font-weight: 700;
+}

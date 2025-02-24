@@ -3,33 +3,36 @@
 @use "sass:color";
 // 🎨 Nowe kolory dla Pathfinder
 $theme-colors: (
-  "primary": #C24C00,   // Ceglasty/Czerwony
-  "secondary": #8C4C46, // Ciemnoczerwony
-  "success": #8CC671,   // Zielony
-  "danger": #dc3545,    // Standardowy czerwony Bootstrapa
-  "warning": #ffc107,   // Standardowy żółty Bootstrapa
-  "info": #17a2b8,      // Standardowy niebieski Bootstrapa
-  "light": #FFFFFF,     // Biały
-  "dark": #111111       // Czarny
+  "primary": #c24c00,
+  // Ceglasty/Czerwony
+  "secondary": #8c4c46,
+  // Ciemnoczerwony
+  "success": #8cc671,
+  // Zielony
+  "danger": #dc3545,
+  // Standardowy czerwony Bootstrapa
+  "warning": #ffc107,
+  // Standardowy żółty Bootstrapa
+  "info": #17a2b8,
+  // Standardowy niebieski Bootstrapa
+  "light": #ffffff,
+  // Biały
+  "dark": #111111 // Czarny,
 ) !default;
 
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-dark: #111111; // Czarny
 
 $color-primary: map-get($theme-colors, "primary");
 $color-success: map-get($theme-colors, "success");
 $color-light: map-get($theme-colors, "light");
 
-
-
-
-
 // Czcionki
-$font-primary: 'Source Sans Pro', sans-serif;
-$font-black: 'Source Sans Pro Black', sans-serif;
-$font-semibold: 'Source Sans Pro Semibold', sans-serif;
-$font-bold: 'Source Sans Pro Bold', sans-serif;
-$font-regular: 'Source Sans Pro Regular', sans-serif;
+$font-primary: "Source Sans Pro", sans-serif;
+$font-black: "Source Sans Pro Black", sans-serif;
+$font-semibold: "Source Sans Pro Semibold", sans-serif;
+$font-bold: "Source Sans Pro Bold", sans-serif;
+$font-regular: "Source Sans Pro Regular", sans-serif;
 
 // 📏 Odstępy i styl globalny
 $spacing-sm: 8px;
@@ -43,11 +46,7 @@ $transition-speed: 0.3s;
 // Funkcja do konwersji na RGB
 @function to-rgb($color-map, $color-name) {
   $color: map.get($color-map, $color-name);
-  @return (
-    color.red($color),
-    color.green($color),
-    color.blue($color)
-  );
+  @return (color.red($color), color.green($color), color.blue($color));
 }
 
 // RGB dla Bootstrapa
@@ -55,6 +54,6 @@ $theme-colors-rgb: map.merge(
   (),
   (
     "primary": to-rgb($theme-colors, "primary"),
-    "secondary": to-rgb($theme-colors, "secondary")
+    "secondary": to-rgb($theme-colors, "secondary"),
   )
 );

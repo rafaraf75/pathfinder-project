@@ -1,3 +1,71 @@
-h1 {
-  color: red;
+@import "../variables";
+
+.finder-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px;
+    text-align: center;
+    background: $color-dark;
+    width: 100%;
+    min-height: 100vh;
+
+    .finder-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+
+    .grid-container {
+        margin-top: -300px;
+        display: grid;
+        grid-template-columns: repeat(10, 40px);
+        grid-template-rows: repeat(10, 40px);
+        gap: 2px;
+        background-color: $color-dark;
+        padding: 10px;
+        border: 2px solid $color-white;
+    }
+
+    .grid-cell {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid $color-white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &.selected {
+            background-color: $color-primary;
+        }
+    }
+
+    .action-button {
+        margin-top: 20px;
+        background: $color-primary;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: darken($color-primary, 10%);
+        }
+    }
 }
+
+footer {
+    background: $color-dark;
+    color: $color-dark;
+    text-align: center;
+    padding: 10px;
+
+    p {
+      color: $color-white;
+    }
+}
+

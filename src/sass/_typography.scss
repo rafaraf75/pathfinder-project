@@ -1,4 +1,4 @@
-@import "variables"; // Import zmiennych, jeśli zawierają definicje fontów
+@import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
 // Globalne ustawienia czcionek
 body {
@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Klasa pomocnicza dla wytłuszczonego tekstu
 .bold-text {
   font-family: $font-bold;
   font-weight: 700;

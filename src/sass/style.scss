@@ -1,7 +1,6 @@
-// Nasze zmienne (nadpisujemy Bootstrap)
 @import "variables";
 
-// Import pełnego Bootstrapa (teraz już działa z naszymi zmiennymi)
+// Import pełnego Bootstrapa
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Nasze ogólne style

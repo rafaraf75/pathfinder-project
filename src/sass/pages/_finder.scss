@@ -5,13 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 150px 0 50px;
   text-align: center;
   background: $color-dark;
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-top: 150px;
+  padding-top: 50px;
 
   .finder-title {
     font-size: 2rem;
@@ -19,20 +18,21 @@
     color: $color-white;
     margin-bottom: 20px;
     position: absolute;
-    top: -300px;
+    top: 5vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
   }
 
   .grid-container {
-    position: relative;
-    top: -350px;
+    position: absolute; // Ustawiamy, aby nachodziło na hero
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -10%);
     display: grid;
     grid-template-columns: repeat(10, 40px);
     grid-template-rows: repeat(10, 40px);
     gap: 1px;
-    background-color: $color-dark;
     padding: 1px;
     border: 2px solid $color-white;
     background-color: transparent;
@@ -53,8 +53,10 @@
   }
 
   .action-button {
-    position: relative;
-    top: -220px;
+    position: absolute;
+    top: calc(50vh + 230px); // Pozycjonowanie pod siatką
+    left: 50%;
+    transform: translateX(-50%);
     background: $color-primary;
     border: none;
     padding: 10px 20px;
@@ -62,7 +64,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    z-index: 4;
+    z-index: 6;
 
     &:hover {
       background: darken($color-primary, 10%);
@@ -81,10 +83,7 @@ footer {
   }
 }
 
-button {
-  margin-top: 20px;
-}
-
+/* Stylowanie przycisków siatki */
 .start {
   background-color: green !important;
 }

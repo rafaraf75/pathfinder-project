@@ -9,26 +9,18 @@
   background: $color-dark;
   width: 100%;
   min-height: 100vh;
-  position: relative;
-  padding-top: 50px;
+  padding-top: 10vh;
 
   .finder-title {
     font-size: 2rem;
     font-weight: bold;
     color: $color-white;
     margin-bottom: 20px;
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+    transform: translateY(-350px);
+    z-index: 20;
   }
 
   .grid-container {
-    position: absolute; // Ustawiamy, aby nachodziło na hero
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -10%);
     display: grid;
     grid-template-columns: repeat(10, 40px);
     grid-template-rows: repeat(10, 40px);
@@ -36,7 +28,7 @@
     padding: 1px;
     border: 2px solid $color-white;
     background-color: transparent;
-    z-index: 5;
+    transform: translateY(-340px);
   }
 
   .grid-cell {
@@ -46,6 +38,7 @@
     border: 1px solid $color-white;
     cursor: pointer;
     transition: background 0.3s ease;
+    z-index: 10;
 
     &.selected {
       background-color: $color-primary;
@@ -53,10 +46,6 @@
   }
 
   .action-button {
-    position: absolute;
-    top: calc(50vh + 230px); // Pozycjonowanie pod siatką
-    left: 50%;
-    transform: translateX(-50%);
     background: $color-primary;
     border: none;
     padding: 10px 20px;
@@ -64,7 +53,8 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    z-index: 6;
+    margin-top: 20px;
+    transform: translateY(-320px);
 
     &:hover {
       background: darken($color-primary, 10%);
@@ -72,24 +62,15 @@
   }
 }
 
-footer {
-  background: $color-dark;
-  color: $color-dark;
-  text-align: center;
-  padding: 10px;
-
-  p {
-    color: $color-white;
-  }
-}
-
 /* Stylowanie przycisków siatki */
-.start {
+.grid-cell.start {
   background-color: green !important;
+  border: 2px solid yellow !important;
 }
 
-.end {
+.grid-cell.end {
   background-color: red !important;
+  border: 2px solid yellow !important;
 }
 
 .obstacle {
@@ -98,4 +79,9 @@ footer {
 
 .path {
   background-color: lightgreen !important;
+}
+
+.available {
+  background-color: rgba(0, 162, 255, 0.5) !important;
+  cursor: pointer;
 }

@@ -5,9 +5,6 @@
   color: $color-white;
 }
 
-//html, body {
-  //height: 100%;
-//}
 header {
   background: transparent;
   position: absolute;
@@ -147,7 +144,7 @@ header {
   bottom: 0;
   width: 100%;
   background: #111;
-  color: white;
+  color: $color-white;
   text-align: center;
   padding: 20px;
 }

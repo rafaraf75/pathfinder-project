@@ -85,3 +85,11 @@
   background-color: rgba(0, 162, 255, 0.5) !important;
   cursor: pointer;
 }
+
+.checked {
+  background-color: rgba(0, 255, 255, 0.3) !important;
+}
+
+.highlighted-start-end {
+  background-color: lightgreen !important; // Upewniamy się, że nie nadpisuje inny kod
+}

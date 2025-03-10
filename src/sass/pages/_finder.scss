@@ -31,20 +31,6 @@
     transform: translateY(-340px);
   }
 
-  .grid-cell {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: 1px solid $color-white;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    z-index: 10;
-
-    &.selected {
-      background-color: $color-primary;
-    }
-  }
-
   .action-button {
     background: $color-primary;
     border: none;
@@ -63,33 +49,34 @@
 }
 
 /* Stylowanie przycisków siatki */
-.grid-cell.start {
-  background-color: green !important;
-  border: 2px solid yellow !important;
-}
+.grid-cell {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;         // Domyślnie puste pole
+  border: 1px solid $color-white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
 
-.grid-cell.end {
-  background-color: red !important;
-  border: 2px solid yellow !important;
+  &.available {
+    background-color: rgba(0, 162, 255, 0.5) !important;
+    cursor: pointer;
+  }
 }
 
 .obstacle {
   background-color: brown !important;
 }
 
+.start {
+  background-color: green !important;
+}
+
+.end {
+  background-color: red !important;
+}
+
 .path {
   background-color: lightgreen !important;
-}
-
-.available {
-  background-color: rgba(0, 162, 255, 0.5) !important;
-  cursor: pointer;
-}
-
-.checked {
-  background-color: rgba(0, 255, 255, 0.3) !important;
-}
-
-.highlighted-start-end {
-  background-color: lightgreen !important; // Upewniamy się, że nie nadpisuje inny kod
+  border: none !important;
 }

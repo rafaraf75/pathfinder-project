@@ -147,6 +147,11 @@ header {
   color: $color-white;
   text-align: center;
   padding: 20px;
+
+  p {
+    margin: 0;
+    color: #fff !important;
+  }
 }
 
 main {

@@ -82,6 +82,13 @@ function loadPage(page) {
             console.error('initializeGrid is not defined!');
           }
         });
+      } else {
+        // Skrypt jest już załadowany -> wywołaj ponownie initializeGrid()
+        if (typeof window.initializeGrid === 'function') {
+          window.initializeGrid();
+        } else {
+          console.error('initializeGrid is not defined!');
+        }
       }
 
       if (!window.pathfinderLoaded) {

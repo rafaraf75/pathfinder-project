@@ -4,9 +4,6 @@ window.findPath = function () {
     return;
   }
 
-  console.log('Szukam ścieżki BFS...');
-  console.log('Start:', window.start, ' End:', window.end);
-
   // Sprawdza, czy dane pole jest przejściowe (obstacle=1 lub start/end=2)
   function isWalkable(row, col) {
     return (
@@ -80,7 +77,6 @@ window.findPath = function () {
 
 // Funkcja do resetowania siatki po kliknięciu "Try Again"
 window.resetGrid = function () {
-  console.log('Resetowanie siatki...');
 
   // Usuwamy klasy i inline style ze wszystkich komórek.
   document.querySelectorAll('.grid-cell').forEach(cell => {

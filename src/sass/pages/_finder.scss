@@ -48,11 +48,10 @@
   }
 }
 
-/* Stylowanie przycisków siatki */
 .grid-cell {
   width: 40px;
   height: 40px;
-  background-color: transparent;         // Domyślnie puste pole
+  background-color: transparent;
   border: 1px solid $color-white;
   cursor: pointer;
   transition: background 0.3s ease;

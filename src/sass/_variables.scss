@@ -1,7 +1,7 @@
 //@import "../../node_modules/bootstrap/scss/functions";
 @use "sass:map";
 @use "sass:color";
-// 🎨 Nowe kolory dla Pathfinder
+// Nowe kolory dla Pathfinder
 $theme-colors: (
   "primary": #c24c00,
   // Ceglasty/Czerwony
@@ -34,7 +34,7 @@ $font-semibold: "Source Sans Pro Semibold", sans-serif;
 $font-bold: "Source Sans Pro Bold", sans-serif;
 $font-regular: "Source Sans Pro Regular", sans-serif;
 
-// 📏 Odstępy i styl globalny
+// Odstępy i styl globalny
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;

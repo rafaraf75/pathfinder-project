@@ -9,7 +9,6 @@ window.currentStep = 1;
 window.firstClick = true;
 
 window.initializeGrid = function () {
-  console.log('Uruchomiono initializeGrid!');
   const gridContainer = document.getElementById('grid-container');
   if (!gridContainer) {
     console.error('Błąd: Nie znaleziono kontenera siatki!');
@@ -35,8 +34,6 @@ window.initializeGrid = function () {
       gridContainer.appendChild(cell);
     }
   }
-  console.log('Siatka wygenerowana!');
-  console.log('Liczba dzieci w gridContainer:', gridContainer.childElementCount);
 };
 
 // Obsługa kliknięcia w kratkę
@@ -130,7 +127,6 @@ document.getElementById('action-button').addEventListener('click', function () {
   }
   // 3) Jeśli jesteśmy w kroku 3 -> oblicz trasę
   else if (window.currentStep === 3) {
-    console.log('Uruchamiam findPath()...');
     window.findPath();
   }
 });

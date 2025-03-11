@@ -58,12 +58,22 @@ function handleCellClick(event) {
   } else if (window.currentStep === 2) {
     // Etap 2: Wybór punktu startowego i końcowego.
     if (!window.start) {
+      // Sprawdzamy, czy kliknięte pole jest częścią narysowanej trasy
+      if (window.grid[row][col] !== 1) {
+        alert('Możesz zaznaczyć START tylko na wyznaczonej trasie!');
+        return; // Przerywamy obsługę kliknięcia
+      }
+      // Ustawiamy punkt startowy
       window.start = { row, col };
       cell.classList.remove('obstacle', 'available');
       cell.classList.add('start');
       window.grid[row][col] = 2; // Start jako część ścieżki
       console.log("Start ustawiony na:", window.start);
     } else if (!window.end) {
+      if (window.grid[row][col] !== 1) {
+        alert('Możesz zaznaczyć END tylko na wyznaczonej trasie!');
+        return;
+      }
       // Ustawiamy punkt końcowy
       window.end = { row, col };
       cell.classList.remove('obstacle', 'available');
